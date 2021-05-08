@@ -1,0 +1,84 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+.app-wrapper{
+  width:95%;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.section{
+  position:relative;
+  overflow-x:hidden;
+}
+
+.button{
+  height:60px;
+  width:320px;
+  background:$red;
+  @include flex();
+  position:relative;
+  cursor:pointer;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+
+  span {
+    position:relative;
+    z-index:2;
+  }
+}
+
+.button:after, .button:before{
+  content:'';
+  position:absolute;
+  z-index:1;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background: $red;
+  top:25px;
+}
+
+.button:after{
+  left:-30px;
+}
+
+.button:before{
+  right:-30px;
+}
+
+.multiple-title{
+  @include flex(center, space-between);
+  margin-bottom:20px;
+}
+
+.multiple-title__text{
+  font-weight: 600;
+  font-size: 32px;
+  color: $fontColor;
+  margin-right:30px;
+}
+
+.multiple-title__line{
+  background:$fontColor;
+  height:1px;
+  margin-right:30px;
+  flex-grow:1;
+}
+
+.with-ml-9{
+  margin-left:90px;
+}
+
+.with-margin-auto{
+  margin:0 auto;
+}

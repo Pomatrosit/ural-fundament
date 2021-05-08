@@ -1,0 +1,15 @@
+{
+  "name": "ural-fundament",
+  "version": "1.0.0",
+  "description": "ural",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "author": "Vasiliy Yurkin",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.32.12"
+  }
+}

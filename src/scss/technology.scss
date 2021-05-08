@@ -1,0 +1,151 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.technology__subtitle{
+  margin-bottom:80px;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  color: #30475E;
+}
+
+.technology-main{
+  position:relative;
+  height:740px;
+}
+
+.technology-content{
+  position:relative;
+  z-index:1;
+}
+
+.technology-background{
+  position:absolute;
+  z-index:0;
+  top:0;
+  bottom:0;
+  left:60px;
+  right:60px;
+  background: radial-gradient(100% 123.35% at 0% 0%, #FFFFFF 0%, #E8E8E8 100%);
+  border-radius: 2px;
+}
+
+.technology__schema{
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  top:70px;
+}
+
+.technology-card{
+  width:275px;
+  background: #FFFFFF;
+  box-shadow: 6px 20px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  padding:24px 34px 13px 34px;
+  position:absolute;
+}
+
+.technology-card1{
+  top:20px;
+  left:0;
+}
+
+.technology-card2{
+  top:380px;
+}
+
+.technology-card3{
+  top:20px;
+  right:0;
+}
+
+.technology-card4{
+  top:350px;
+  right:0px;
+}
+
+.technology-card__title{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #222831;
+  margin-bottom:20px;
+}
+
+.technology-card__text{
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  color: #7A7A7A;
+  margin-bottom:27px;
+  padding-left:15px;
+  position:relative;
+}
+
+.technology-card__text:after{
+  content:'';
+  position:absolute;
+  background: #7A7A7A;
+  top:7px;
+  left:0;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+}
+
+.technology-card__arrow{
+  position:absolute;
+}
+
+.technology-card__arrow1{
+  top:22px;
+  right:-10px;
+}
+
+.technology-card__arrow2{
+  top:17px;
+  right:-10px;
+}
+
+.technology-card__arrow3{
+  top:22px;
+  left:-10px;
+}
+
+.technology-card__arrow4{
+  top:18px;
+  left:-10px;
+}
+
+.technology-card-bottom{
+  background: #FFFFFF;
+  box-shadow: 6px 20px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  padding:34px 80px 34px 0;
+  position:absolute;
+  top:500px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.technology-card-bottom__text{
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: $fontColor;
+  padding-left: 28px;
+  border-left:3px solid $fontColor;
+}
+
+.technology-button{
+  margin-top:30px;
+  position:relative;
+  padding:40px 0;
+}
+
+.technology-button__button{
+  border:1px solid red;
+}

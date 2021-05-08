@@ -1,0 +1,5 @@
+import './scss/common.scss'
+import './scss/header.scss'
+import './scss/advantages.scss'
+import './scss/kinds.scss'
+import './scss/technology.scss'

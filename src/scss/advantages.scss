@@ -1,0 +1,73 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.advantages{
+  margin-top:-300px;
+}
+
+.advantages-main{
+  padding:48px 85px;
+  background: #FFF;
+  box-shadow: 2px 7px 50px rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  position:relative;
+}
+
+.advantages-main:after{
+  content:'';
+  position:absolute;
+  height:5px;
+  width:60%;
+  left:20%;
+  top:0;
+  background:$fontColor;
+}
+
+.advantages-title{
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $fontColor;
+  margin-bottom:100px;
+}
+
+.advantages-wrapper{
+  @include flex(center, space-between, row, wrap);
+}
+
+.advantage-item{
+  width:46%;
+  position:relative;
+  margin-bottom:70px;
+}
+
+.advantage-item__image{
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1;
+}
+
+.advantage-item__title, .advantage-item__description{
+  position:relative;
+  z-index:2;
+}
+
+.advantage-item__title{
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  color: #14293F;
+  margin-bottom:19px;
+  margin-top:20px;
+}
+
+.advantage-item__description{
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: #222831;
+}
