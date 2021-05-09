@@ -1,0 +1,132 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.stages{
+  background: #F8F8F8;
+  padding: 200px 0;
+}
+
+.stages-subtitle{
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  color: $fontColor;
+  margin-top:20px;
+  margin-bottom:80px;
+}
+
+.stages-main{
+  background: #FFFFFF;
+  box-shadow: 2px 7px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  position:relative;
+}
+
+.stages-tabs{
+  @include flex();
+  border-bottom:1px solid #E9DFDF;
+  position:relative;
+}
+
+.stages-tabs__after{
+  position:absolute;
+  content:'';
+  width:25%;
+  height:4px;
+  background:$red;
+  bottom:0;
+  left:0;
+  transition:0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.stages-tab{
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  color: #14293F;
+  width:25%;
+  height:96px;
+  @include flex(center, center);
+  cursor:pointer;
+  transition:0.3s;
+  position:relative;
+}
+
+.stages-tab--active{
+  color: $red;
+}
+
+.stages-content{
+  padding:40px 60px 60px 60px;
+}
+
+.stages-swiper-container{
+  height:200px;
+}
+
+.stages-description{
+  margin-top:40px;
+  @include flex(flex-start, space-between)
+}
+
+.stages-description__text{
+  font-size: 16px;
+  line-height: 170%;
+  letter-spacing: 0.03em;
+  color: #222831;
+  width:50%;
+}
+
+.stages-description__worktime-text{
+  font-size: 16px;
+  line-height: 170%;
+  letter-spacing: 0.03em;
+  color: #848484;
+  margin-bottom:10px;
+}
+
+.stages-description__worktime-text span{
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 170%;
+  text-align: right;
+  letter-spacing: 0.03em;
+  color: #222831;
+}
+
+.stages-swiper__arrow{
+  background:red;
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  background: rgba(0, 0, 0, 0.5);
+  width:calc(11.7% - 21px);
+  z-index:5;
+  @include flex(center, center);
+  cursor:pointer;
+}
+
+.stages-swiper-slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.stages-swiper__arrow:hover svg{
+  transition:0.3s;
+}
+
+.stages-points{
+  position:absolute;
+  bottom:50px;
+  right:calc(100% + 20px);
+}
+
+@media (hover:hover){
+  .stages-swiper__arrow:hover svg {
+    transform:translateX(5px);
+  }
+}

@@ -1,0 +1,71 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.deficite{
+  padding-top:200px;
+  padding-bottom:200px;
+}
+
+.deficite-main{
+  position:relative;
+  z-index:1;
+}
+
+.deficite-main-inner{
+  padding-bottom:555px;
+  @include flex(center, space-between);
+  position:relative;
+}
+
+.deficite-left{
+  padding-left:30px;
+  border-left:2px solid $fontColor;
+}
+
+.deficite__title{
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: $fontColor;
+  margin-bottom:32px;
+}
+
+.deficite__subtitle{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: $fontColor;
+}
+
+.deficite-points{
+  position:absolute;
+  top:0;
+  right: calc(100% + 20px);
+}
+
+.deficite-img{
+  margin-bottom:27px;
+}
+
+.deficite-right{
+  @include flex(center, center, column)
+}
+
+.deficite-pipes-img{
+  position:absolute;
+  bottom:200px;
+  left:0;
+  height:480px;
+  width:calc(50vw + 600px);
+  object-fit:cover;
+  z-index:1;
+}
+
+.deficite-logo{
+  position:absolute;
+  z-index:0;
+  top:200px;
+  right:100px;
+}

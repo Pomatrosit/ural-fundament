@@ -57,7 +57,7 @@
   position:absolute;
   z-index:0;
   top:100px;
-  left:0;
+  left:1%;
 }
 
 .kinds-points2{
@@ -75,5 +75,5 @@
   top:160px;
   left:0;
   bottom:200px;
-  right:22%;
+  right:calc(50vw - 540px);
 }

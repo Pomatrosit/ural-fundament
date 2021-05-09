@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.32.12"
+  },
+  "dependencies": {
+    "swiper": "^6.5.9"
   }
 }
