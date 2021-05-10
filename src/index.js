@@ -9,6 +9,7 @@ import './scss/stages.scss'
 import './scss/deficite.scss'
 import './scss/portfolio.scss'
 import './scss/contacts.scss'
+import './scss/footer.scss'
 import { app } from './js/app'
 
 document.addEventListener("DOMContentLoaded", function(event) {

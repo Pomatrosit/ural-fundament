@@ -1,0 +1,32 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.footer{
+  background: #F7F7F7;
+  padding:80px 0;
+}
+
+.footer-text{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  color: $fontColor;
+  margin-top:25px;
+}
+
+.footer-main{
+  @include flex(center, space-between);
+}
+
+.footer-bg{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-100%, -50%);
+}
+
+.footer-menu{
+  padding-top:16px;
+  border-top:2px solid $fontColor;
+  margin-bottom:18px;
+}

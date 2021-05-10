@@ -4,3 +4,71 @@
 .contacts{
   padding-top:200px;
 }
+
+.contacts-main{
+  @include flex(flex-end, flex-start);
+  padding-bottom:760px;
+  position:relative;
+  z-index:1;
+}
+
+.contacts-title{
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  color: $fontColor;
+  margin-bottom:27px;
+}
+
+.contacts-text{
+  @include flex(center, flex-start);
+  margin-bottom:21px;
+}
+
+.contacts-text span {
+  margin-left:15px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  color: $fontColor;
+}
+
+.contacts-left{
+  padding-left:26px;
+  border-left:2px solid $fontColor;
+  padding-right:120px;
+}
+
+.contacts-points1{
+  position:absolute;
+  left:0;
+  top:70px;
+  z-index:0;
+}
+
+.contacts-points2{
+  position:absolute;
+  top:300px;
+  right:0;
+  z-index:0;
+}
+
+.contacts-background-title{
+  font-size: 162px;
+  font-weight:300;
+  letter-spacing: 0.03em;
+  color: #FAFAFA;
+  position:absolute;
+  top:80px;
+  right:20px;
+  text-transform:uppercase;
+  z-index:0;
+}
+
+.contacts-map{
+  position:absolute;
+  height:700px;
+  width:calc(50vw + 600px);
+  bottom:0;
+  right:0;
+}
