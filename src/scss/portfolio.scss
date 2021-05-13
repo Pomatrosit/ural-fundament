@@ -5,3 +5,154 @@
   background: #F8F8F8;
   padding:200px 0;
 }
+
+.portfolio-main{
+  position:relative;
+}
+
+.portfolio-swiper-container{
+  background: #FFFFFF;
+  box-shadow: 2px 7px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  width:calc(100% - 190px);
+}
+
+.portfolio-swiper-slide{
+  padding:60px;
+}
+
+.portfolio-swiper-slide{
+  @include flex(center, space-between)
+}
+
+.portfolio-slide__left{
+  width:40%;
+  height:100%;
+}
+
+.portfolio-slide__right{
+  width:55%;
+}
+
+.portfolio-slide__left img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.portfolit-slide__title{
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: $fontColor;
+  margin-bottom:5px;
+}
+
+.portfolit-slide__subtitle{
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: #848484;
+}
+
+.portfolio-slide__main{
+  padding:30px 0 40px 0;
+  border-top: 1px solid #EBEBEB;
+  border-bottom: 1px solid #EBEBEB;
+  margin:25px 0;
+}
+
+.portfolit-slide__row, .portfolit-slide__price-row{
+  margin-bottom:8px;
+  @include flex(center, space-between);
+}
+
+.portfolit-slide__row span:first-child, .portfolit-slide__price-row span:first-child{
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: #939393;
+}
+
+.portfolit-slide__row span:last-child{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 180%;
+  letter-spacing: 0.03em;
+  color: $fontColor;
+}
+
+.portfolio-price-span{
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  color: #F05454;
+}
+
+.portcolio-slide__buttons{
+  margin-top:28px;
+  @include flex(center)
+}
+
+.portfolio-slide__button-gray{
+  @include flex(center, center);
+  width:35%;
+  height:56px;
+  background: $fontColor;
+  box-shadow: 5px 2px 14px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  cursor:pointer;
+
+  span{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FFFFFF;
+  }
+}
+
+.portfolio-slide__button-light{
+  @include flex(center, center);
+  width:65%;
+  height:56px;
+  background: #fff;
+  box-shadow: 5px 2px 14px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  border:1px solid $fontColor;
+  cursor:pointer;
+
+  span{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    color: $fontColor;
+  }
+}
+
+.price-card__buttons{
+  @include flex(center, flex-start);
+}
+
+.swiper-pagination-bullet{
+  background:red;
+}
+
+.portfolio-swiper-pagination .swiper-pagination-bullet-active{
+  background:$fontColor!important;
+}
+
+.portfolio-swiper-arrow-left, .portfolio-swiper-arrow-right{
+  background:#fff;
+  width:60px;
+  height:60px;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:0;
+  @include flex(center, center);
+  cursor:pointer;
+}
+
+.portfolio-swiper-arrow-right{
+  left:calc(100% - 60px);
+}

@@ -1,5 +1,5 @@
-import Swiper from 'swiper';
-import 'swiper/swiper-bundle.css';
+import Swiper from 'swiper'
+import 'swiper/swiper-bundle.css'
 
 export const stages = () => {
   ////// ТАБЫ /////
