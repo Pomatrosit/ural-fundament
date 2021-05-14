@@ -1,2 +1,252 @@
 @import './variables.scss';
 @import './mixins.scss';
+
+.js-Dropdown {
+  display: inline-block;
+  font: 400 14px sans-serif;
+  position: relative;
+  width: 100%;
+}
+.js-Dropdown-title {
+  background: #ffffff;
+  border: 1px solid #9B9B9B;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font: 400 14px sans-serif;
+  height: 3em;
+  padding: 0.5em;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  color:#222831;
+}
+.js-Dropdown-title:after {
+  border-color: #a5a5a5 transparent transparent transparent;
+  border-style: solid;
+  border-width: 10px 12px;
+  content: '';
+  display: block;
+  height: 0;
+  position: absolute;
+  right: 1em;
+  top: 45%;
+  width: 0;
+}
+.js-Dropdown-list {
+  background: #ffffff;
+  border-left: 1px solid #a5a5a5;
+  border-right: 1px solid #a5a5a5;
+  box-sizing: border-box;
+  display: none;
+  height: 0;
+  list-style: none;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  transition: 0.2s linear;
+  width: 100%;
+  z-index: 999;
+}
+.js-Dropdown-list.is-open {
+  display: block;
+  height: auto;
+  opacity: 1;
+}
+.js-Dropdown-list li {
+  border-bottom: 1px solid #a5a5a5;
+  cursor: pointer;
+  padding: 1em 0.5em;
+}
+.js-Dropdown-list li:hover {
+  background-color: #fff5e9;
+}
+.js-Dropdown-list li.is-selected {
+  background-color: #ffdfb6;
+}
+
+.quiz-header{
+  padding-bottom:150px;
+}
+
+.quiz-main{
+  margin-top:100px;
+  position:relative;
+  @include flex(flex-start, space-between);
+}
+
+.quiz-text{
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+  color: #4C4D52;
+}
+
+.quiz__house-img{
+  margin-top:120px;
+  width:510px;
+  z-index:1;
+  position:relative;
+}
+
+.quiz-background{
+  position:absolute;
+  top:50px;
+  left:-50px;
+  z-index:0;
+}
+
+.quiz__right, .quiz__left{
+  position:relative;
+}
+
+.quiz-body{
+  background: #fff;
+  padding:40px 80px 0px 60px;
+  width:520px;
+  position:relative;
+  display:none;
+}
+
+.quiz-body:after{
+  content:'';
+  position:absolute;
+  height:2px;
+  width:200px;
+  background:#30475E;
+  left:60px;
+  top:0;
+}
+
+.quiz-body__title{
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  color: #14293F;
+  margin-bottom:30px;
+}
+
+.quiz-body__subtitle{
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: #14293F;
+  margin-bottom:15px;
+}
+
+.quiz__type-select-wrapper, .quiz__material-select-wrapper{
+  margin-bottom:25px;
+}
+
+.quiz-inputs{
+  @include flex(center, space-between);
+  margin-bottom:25px;
+}
+
+.quiz-input{
+  outline:none;
+  border:none;
+  padding: 0 10px;
+  height:40px;
+  background: #FFFFFF;
+  border: 1px solid #9B9B9B;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.quiz-file-group{
+  @include flex(center, flex-start);
+  margin-bottom:64px;
+}
+
+.choose-file-btn{
+  width:215px;
+  height:40px;
+  @include flex(center, center);
+  background: #30475E;
+  border-radius: 2px;
+  cursor:pointer;
+  margin-right:23px;
+}
+
+.choose-file-btn span{
+  margin-left:12px;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+
+.choose-file-status{
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: #535353;
+}
+
+.quiz-finish-btn{
+  cursor:pointer;
+  @include flex(center, flex-start)
+}
+
+.quiz-finish-btn span{
+  margin-right:12px;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  color: #14293F;
+}
+
+.quiz-bottom-buttons{
+  @include flex(center, space-between);
+  width:calc(100% + 140px);
+  margin-left:-60px;
+  transform:translateY(80px)
+}
+
+.quiz-bottom__button2{
+  @include flex(center, center);
+  width:44%;
+  height:56px;
+  background: $fontColor;
+  box-shadow: 5px 2px 14px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  cursor:pointer;
+
+  span{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FFFFFF;
+  }
+}
+
+.quiz-bottom__button1{
+  @include flex(center, center);
+  width:52%;
+  height:56px;
+  background: transparent;
+  box-shadow: 5px 2px 14px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  border:1px solid $fontColor;
+  cursor:pointer;
+
+  span{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    color: $fontColor;
+  }
+}
+
+.quiz-points1{
+  position:absolute;
+  right:540px;
+  top:75px;
+}
+
+.quiz-points2{
+  position:absolute;
+  right:-300px;
+  bottom:-20px;
+}

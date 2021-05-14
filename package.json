@@ -15,6 +15,7 @@
     "sass": "^1.32.12"
   },
   "dependencies": {
-    "swiper": "^6.5.9"
+    "swiper": "^6.5.9",
+    "vanilla-js-dropdown": "^2.2.0"
   }
 }
