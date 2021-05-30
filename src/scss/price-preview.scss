@@ -24,7 +24,7 @@
 }
 
 .price-preview__percent{
-  font-weight: bold;
+  font-weight: 600;
   font-size: 72px;
   letter-spacing: 0.03em;
   color: #F05454;
@@ -73,4 +73,66 @@
   height:480px;
   width:calc(50vw + 600px);
   object-fit:cover;
+}
+
+@media screen and (max-width: 1250px){
+  .price-preview{
+    padding-top:150px;
+  }
+  .price-preview-img{
+    width:97.5%;
+  }
+  .price-preview-background{
+    top:100px;
+  }
+  .price-preview-points1{
+    top:70px;
+  }
+}
+
+@media screen and (max-width: 1050px){
+  .price-preview__main{
+    flex-wrap:wrap;
+  }
+  .price-preview__text{
+    width:100%;
+    margin-top:50px;
+  }
+  .price-preview__right{
+    width:100%;
+    margin-top:50px;
+  }
+  .price-preview-points2{
+    display:none;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .price-preview__text, .price-preview__percent-desc{
+    font-size: 16px;
+  }
+  .price-preview__text br{
+    display:none;
+  }
+  .price-preview-img{
+    height:200px;
+  }
+  .price-preview__main{
+    padding-bottom:250px;
+  }
+  .price-preview-points1{
+    left:-220px;
+  }
+  .price-preview__text{
+    border-left:none;
+  }
+  .price-preview__text:after{
+    content:'';
+    position:absolute;
+    left:0;
+    background:$fontColor;
+    width:2px;
+    height:calc(100% - 300px);
+    top:50px;
+  }
 }

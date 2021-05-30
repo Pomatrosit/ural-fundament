@@ -3,6 +3,7 @@
 
 .advantages{
   margin-top:-300px;
+  padding-bottom:50px;
 }
 
 .advantages-main{
@@ -41,6 +42,7 @@
   width:46%;
   position:relative;
   margin-bottom:70px;
+  padding-left:30px;
 }
 
 .advantage-item__image{
@@ -70,4 +72,45 @@
   line-height: 150%;
   letter-spacing: 0.03em;
   color: #222831;
+}
+
+.advantages-arrow{
+  margin:0 auto;
+  display:block;
+  margin-bottom:15px;
+  display:none;
+}
+
+@media screen and (max-width: 700px){
+  .advantages-title{
+    font-size:18px;
+    margin-bottom:10px;
+  }
+  .advantages-arrow{
+    display:block;
+  }
+  .advantage-item{
+    width:100%;
+    margin-bottom:40px;
+  }
+  .advantages-main{
+    padding-left:20px;
+    padding-right:20px;
+  }
+  .advantage-item__title{
+    font-size:16px;
+  }
+  .advantage-item__description{
+    font-size:14px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .triangle{
+    height:100px;
+  }
+  .advantages{
+    margin-top:0;
+    z-index:1;
+  }
 }

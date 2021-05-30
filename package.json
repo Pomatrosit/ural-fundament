@@ -10,11 +10,14 @@
   "author": "Vasiliy Yurkin",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
     "cssnano": "^5.0.2",
     "postcss": "^8.2.7",
     "sass": "^1.32.12"
   },
   "dependencies": {
+    "imask": "^6.0.7",
+    "parcel": "^2.0.0-beta.2",
     "swiper": "^6.5.9",
     "vanilla-js-dropdown": "^2.2.0"
   }

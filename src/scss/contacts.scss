@@ -3,6 +3,7 @@
 
 .contacts{
   padding-top:200px;
+  overflow:hidden;
 }
 
 .contacts-main{
@@ -71,4 +72,88 @@
   width:calc(50vw + 600px);
   bottom:0;
   right:0;
+}
+
+.contacts .multiple-title{
+  display:none;
+}
+
+.contacts-mess-title{
+  margin-bottom:21px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: $fontColor;
+  display:none;
+}
+
+@media screen and (max-width: 1260px){
+  .contacts-map{
+    width:100%;
+  }
+  .contacts-background-title{
+    font-size:100px;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .contacts-title{
+    width:100%;
+  }
+  .contacts-main{
+    flex-direction:column;
+  }
+  .contacts-left{
+    width:100%;
+    padding:0;
+    padding-left:20px;
+  }
+  .contacts-right{
+    width:100%;
+    margin-top:30px;
+  }
+  .contacts-background-title{
+    display:none;
+  }
+  .contacts-map{
+    height:400px;
+  }
+  .contacts-main{
+    padding-bottom:420px;
+  }
+  .contacts-mess-title{
+    display:block;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .contacts{
+    padding-top:0;
+  }
+  .contacts-points1{
+    transform:rotate(90deg);
+    left:calc(100% - 260px);
+    top:400px;
+  }
+  .contacts-points2{
+    transform:rotate(90deg);
+    top:1000px;
+    left:calc(100% - 260px);
+  }
+  .contacts .multiple-title{
+    display:flex;
+  }
+  .contacts-left{
+    padding-left:0;
+    border-left:none;
+  }
+  .contacts-title{
+    font-size:16px;
+    margin-top:20px;
+    margin-bottom:40px;
+  }
+  .contacts-text span{
+    font-size:14px;
+  }
 }

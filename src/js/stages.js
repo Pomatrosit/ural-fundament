@@ -17,12 +17,21 @@ export const stages = () => {
     })
   }
 
-  //////  Swiper  /////
+  //////  Swipers  /////
 
   const swiper = new Swiper('.stages-swiper-container', {
     loop: true,
-    slidesPerView: 3.4,
-    spaceBetween: 26
+    slidesPerView: 1.2,
+    spaceBetween: 15,
+    breakpoints: {
+      600: {
+        slidesPerView: 2,
+        spaceBetween: 26,
+      },
+      900: {
+        slidesPerView: 3.4
+      }
+    }
   });
 
   const arrow = document.querySelector('.stages-swiper__arrow')
@@ -30,6 +39,21 @@ export const stages = () => {
   arrow.addEventListener('click', () => {
     swiper.slideNext()
   })
+
+  const tabSwiper = new Swiper('.stages-tabs-swiper-container', {
+    loop: false,
+    slidesPerView: 0.6,
+    spaceBetween: 0,
+    autoHeight:true,
+    resistanceRatio:0.5,
+    breakpoints: {
+      600: {
+        slidesPerView: 1
+      }
+    }
+  });
+
+  //stages-tabs-swiper-container
 
 
 }

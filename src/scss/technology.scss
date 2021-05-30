@@ -38,7 +38,7 @@
 }
 
 .technology-card{
-  width:275px;
+  width:290px;
   background: #FFFFFF;
   box-shadow: 6px 20px 30px rgba(0, 0, 0, 0.08);
   border-radius: 2px;
@@ -148,4 +148,111 @@
 
 .technology-button__button{
   border:1px solid red;
+}
+
+.technology__schema2{
+  display:none;
+}
+
+.technology-card:after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:30px;
+  background: rgba(48, 71, 94, 0.2);
+  height:2px;
+  width:calc(100% - 60px);
+  display:none;
+}
+
+.technology-card__number{
+  position:absolute;
+  top:-40px;
+  left:0;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  color: #D6DADF;
+  display:none;
+}
+
+@media screen and (max-width: 1180px){
+  .technology-main{
+    height:auto;
+  }
+  .technology__schema{
+    display:none;
+  }
+  .technology-background{
+    display:none;
+  }
+  .technology-card{
+    position:relative;
+    top:0;
+    right:0;
+  }
+  .technology-card svg{
+    display:none;
+  }
+  .technology-card-bottom{
+    position:relative;
+    top:0;
+  }
+  .technology-main br {
+    display:none;
+  }
+  .technology-card{
+    width:auto;
+    margin-bottom:20px;
+  }
+  .technology-card{
+    padding:30px 30px 50px 30px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .technology-button .button{
+    width:240px;
+  }
+  .technology__subtitle{
+    display:none;
+  }
+  .technology__schema2{
+    display:block;
+    position:relative;
+    left:50%;
+    transform:translateX(-50%);
+    margin-bottom:37px;
+  }
+  .technology-card__title{
+    color:$fontColor;
+    font-weight:700;
+  }
+  .technology-card:after{
+    display:block;
+  }
+  .technology-card{
+    margin-bottom:85px;
+    box-shadow: 6px 1px 15px rgba(0, 0, 0, 0.05);
+  }
+  .technology-card__number{
+    display:block;
+  }
+  .technology-card-bottom{
+    background:$fontColor;
+    padding:0 25px 49px 25px;
+  }
+  .technology-card-bottom br{
+    display:none;
+  }
+  .technology-card-bottom__text{
+    padding-top:28px;
+    padding-left:0;
+    color:#fff;
+    font-weight:700;
+    border-top:2px solid #fff;
+  }
+  .technology-button{
+    margin-top:-20px;
+  }
 }

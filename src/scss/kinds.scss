@@ -24,20 +24,19 @@
 }
 
 .kinds__items{
-  @include flex(center, flex-start);
-  align-items:center;
+  position:relative;
 }
 
 .kinds-item{
-  width:25%;
   height:480px;
   position:relative;
+  overflow:hidden;
 }
 
 .kinds__item img{
   width:100%;
   height:100%;
-  object-fit:cover;
+  display:block;
 }
 
 .kinds-item__title{
@@ -76,4 +75,111 @@
   left:0;
   bottom:200px;
   right:calc(50vw - 540px);
+}
+
+.kinds-button{
+  width:240px;
+  margin:0 auto;
+  display:none;
+  margin-top:20px;
+}
+
+.kinds__title-mobile{
+  display:none;
+  margin-top:20px;
+  padding:70px 0;
+}
+
+.kinds__title-mobile-text{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: $fontColor;
+  margin-bottom:40px;
+  padding-left:15px;
+  border-left:2px solid $fontColor;
+}
+
+.kinds-title2-mobile{
+  margin-top:94px;
+}
+
+.kinds-title2-mobile{
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $fontColor;
+}
+
+.kinds-arrow-mobile{
+  display:block;
+  margin:10px auto 0 auto;
+}
+
+.kinds__title-mobile, .kinds-title2-mobile, .kinds-arrow-mobile{
+  display:none;
+}
+
+.kinds .slider-arrow-right, .kinds .slider-arrow-left{
+  display:none;
+}
+
+@media screen and (max-width: 900px){
+  .kinds-points1{
+    left:-300px;
+    top:120px;
+  }
+  .kinds .slider-arrow-right, .kinds .slider-arrow-left{
+    display:flex;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .kinds{
+    margin-top:-100px;
+  }
+  .kinds-item{
+    height:400px;
+  }
+  .kinds__title{
+    font-size:16px;
+  }
+  .kinds-button{
+    display:flex;
+  }
+  .kinds-background{
+    bottom:280px;
+  }
+  .kinds{
+    padding-bottom:80px;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .kinds-item{
+    height:400px;
+  }
+  .kinds__title{
+    display:none;
+  }
+  .kinds__title-mobile{
+    display:block;
+  }
+  .kinds-background{
+    bottom:800px;
+  }
+  .kinds-points2{
+    bottom:560px;
+    transform:rotate(90deg);
+    right:-100px;
+  }
+  .kinds__items{
+    margin-top:20px;
+  }
+  .kinds__title-mobile, .kinds-title2-mobile, .kinds-arrow-mobile{
+    display:block;
+  }
 }

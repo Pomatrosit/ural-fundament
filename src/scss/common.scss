@@ -5,7 +5,29 @@
   padding:0;
   margin:0;
   box-sizing:border-box;
-  font-family: 'Lato', sans-serif;
+  -moz-user-select: none; /* Mozilla Firefox */
+  -ms-user-select: none; /* Internet Explorer (не поддерживается) */
+  -o-user-select: none; /* Opera Presto (не поддерживается) */
+  -webkit-user-select: none; /* Google Chrome, Opera Next, Safari */
+  -webkit-tap-highlight-color: transparent;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  //font-family: 'Lato Regular', sans-serif;
+  font-display:swap;
+  // font-family: 'Lato Regular', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  //   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+input, input:before, input:after {
+    -webkit-user-select: initial;
+    -khtml-user-select: initial;
+    -moz-user-select: initial;
+    -ms-user-select: initial;
+    user-select: initial;
 }
 
 .app-wrapper{
@@ -26,10 +48,11 @@
   @include flex();
   position:relative;
   cursor:pointer;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 14px;
   text-align: center;
   color: #fff;
+  border-radius:2px;
 
   span {
     position:relative;
@@ -66,6 +89,7 @@
   font-size: 32px;
   color: $fontColor;
   margin-right:30px;
+  order:1;
 }
 
 .multiple-title__line{
@@ -73,6 +97,11 @@
   height:1px;
   margin-right:30px;
   flex-grow:1;
+  order:2;
+}
+
+.multiple-title img{
+  order:3;
 }
 
 .with-ml-9{
@@ -85,4 +114,65 @@
 
 .with-mr3{
   margin-right:30px;
+}
+
+.btn-disabled{
+  opacity:0.5;
+  pointer-events:none;
+}
+
+@media screen and (max-width: 1100px){
+  .multiple-title{
+    flex-wrap:wrap;
+  }
+  .multiple-title__line{
+    order:1;
+  }
+  .multiple-title img{
+    order:2;
+  }
+  .multiple-title__text{
+    order:3;
+    width:100%;
+    margin-top:20px;
+    font-size: 26px;
+  }
+  .footer-bottom__first{
+    width:100%;
+    margin-bottom:20px;
+  }
+  .footer-bottom__second{
+    width:100%;
+  }
+}
+
+.slider-arrow-left, .slider-arrow-right{
+  background:#fff;
+  width:40px;
+  height:40px;
+  top:50%;
+  transform:translateY(-50%);
+  left:0;
+  @include flex(center, center);
+  cursor:pointer;
+  position:absolute;
+  z-index:20;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.slider-arrow-right{
+  left:calc(100% - 40px)
+}
+
+@media screen and (max-width: 600px){
+  .multiple-title__text{
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .button{
+    width:100%!important;
+  }
 }

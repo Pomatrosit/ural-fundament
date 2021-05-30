@@ -3,6 +3,7 @@
 
 .price{
   padding-bottom:200px;
+  overflow:hidden;
 }
 
 .price-title{
@@ -24,6 +25,8 @@
   box-shadow: 2px 7px 50px rgba(0, 0, 0, 0.05);
   border-radius: 2px;
   margin-bottom:40px;
+  position:relative;
+  z-index:1;
 }
 
 .price-card__left{
@@ -50,11 +53,11 @@
   height:56px;
   background: $fontColor;
   box-shadow: 5px 2px 14px rgba(0, 0, 0, 0.15);
-  border-radius: 2px;
   cursor:pointer;
+  border-radius:2px 0 0 2px;
 
   span{
-    font-weight: bold;
+    font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     color: #FFFFFF;
@@ -67,12 +70,12 @@
   height:56px;
   background: #fff;
   box-shadow: 5px 2px 14px rgba(0, 0, 0, 0.15);
-  border-radius: 2px;
   border:1px solid $fontColor;
   cursor:pointer;
+  border-radius:0 2px 2px 0;
 
   span{
-    font-weight: bold;
+    font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     color: $fontColor;
@@ -84,7 +87,7 @@
 }
 
 .price-card__title{
-  font-weight: 800;
+  font-weight: 600;
   font-size: 20px;
   line-height: 150%;
   letter-spacing: 0.02em;
@@ -98,17 +101,31 @@
   font-size: 18px;
   letter-spacing: 0.03em;
   color: $fontColor;
-  margin-bottom:5px;
+  margin-bottom:10px;
+}
+
+.price-card__price-block{
+  margin-bottom:40px;
+  margin-top:35px;
 }
 
 .price-card__price{
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 150%;
+  @include flex(center, space-between);
+  font-size:18px;
+  width:400px;
+  margin-bottom:10px;
+}
+
+.price-card__price span:first-child{
+  font-weight: 500;
   letter-spacing: 0.02em;
-  color: $red;
-  margin-top:25px;
-  margin-bottom:40px;
+  color: #878787;
+}
+
+.price-card__price span:last-child{
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color:$red;
 }
 
 .price-card__number{
@@ -148,7 +165,7 @@
 .price-bottom__title{
   font-weight: 500;
   font-size: 20px;
-  line-height: 120%;
+  line-height: 150%;
   letter-spacing: 0.03em;
   color: $fontColor;
   padding-left:50px;
@@ -177,4 +194,147 @@
   position:absolute;
   top:150px;
   right: calc(100% + 20px);
+  z-index:0;
+}
+
+.price-card__mobile-content{
+  display:none;
+}
+
+.price-card__mobile-text{
+  @include flex(center, space-between)
+}
+
+.price-card__mobile-text span:first-child{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: #878787;
+  margin-bottom:10px;
+}
+
+.price-card__mobile-text span:last-child{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color:$fontColor;
+}
+
+.price-card__left-img{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  display:none;
+}
+
+.price-content__points2{
+  position:absolute;
+  bottom:-35px;
+  right:-250px;
+  display:none;
+}
+
+@media screen and (max-width: 1200px){
+  .price-bottom__points{
+    display:none;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .price-card__right{
+    padding:20px 40px 35px 40px;
+  }
+  .price-card__button-gray, .price-card__button-light{
+    width:50%;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .price{
+    margin-top:-100px;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .price-bottom{
+    display:none;
+  }
+  .price-card{
+    flex-direction:column;
+  }
+  .price-card__right{
+    width:100%;
+    border-left:none;
+  }
+  .price-card__left{
+    padding-top:50px;
+    width:100%;
+  }
+  .price-card__desktop-content{
+    display:none;
+  }
+  .price-card__mobile-content{
+    display:block;
+  }
+  .price-card__price{
+    width:100%;
+  }
+  .price-card__number{
+    display:none;
+  }
+  .price-card__right-img{
+    display:none;
+  }
+  .price-card__left-img{
+    display:block;
+  }
+  .price{
+    padding-bottom:70px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .price-card__buttons{
+    flex-wrap:wrap;
+  }
+  .price-card__button-gray, .price-card__button-light{
+    width:100%;
+  }
+  .price-card__button-gray{
+    margin-bottom:15px;
+  }
+  .price-card__button-light{
+    margin-bottom:39px;
+  }
+  .price-card__right{
+    padding:10px;
+  }
+  .price-subtitle{
+    display:none;
+  }
+  .price-card__price{
+    font-size:14px;
+  }
+  .price-card__main-img{
+    width:80px;
+    padding-top:50px;
+    padding-bottom:50px;
+    transform:translateY(-20px)
+  }
+  .price-card__title{
+    font-size: 16px;
+  }
+  .price .multiple-title__text{
+    margin-bottom:30px;
+  }
+  .price-content__points{
+    right:-320px;
+    top:90px;
+  }
+  .price-content__points2{
+    display:block
+  }
 }

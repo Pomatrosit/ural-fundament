@@ -4,6 +4,7 @@
 .stages{
   background: #F8F8F8;
   padding: 200px 0;
+  overflow:hidden;
 }
 
 .stages-subtitle{
@@ -13,6 +14,7 @@
   color: $fontColor;
   margin-top:20px;
   margin-bottom:80px;
+  line-height:120%;
 }
 
 .stages-main{
@@ -41,7 +43,7 @@
 }
 
 .stages-tab{
-  font-weight: bold;
+  font-weight: 500;
   font-size: 20px;
   line-height: 120%;
   letter-spacing: 0.03em;
@@ -52,6 +54,7 @@
   cursor:pointer;
   transition:0.3s;
   position:relative;
+  text-align:center;
 }
 
 .stages-tab--active{
@@ -103,12 +106,11 @@
   right:0;
   bottom:0;
   background: rgba(0, 0, 0, 0.5);
-  width:calc(11.7% - 21px);
+  width:calc(11.7% - 13px);
   z-index:5;
   @include flex(center, center);
   cursor:pointer;
 }
-
 .stages-swiper-slide img{
   width:100%;
   height:100%;
@@ -125,8 +127,90 @@
   right:calc(100% + 20px);
 }
 
+.stages-points2{
+  position:absolute;
+  top:-35px;
+  right:-250px;
+  display:none;
+}
+
+.stages-warning{
+  position:absolute;
+  top:-50px;
+  right:0;
+  display:none;
+}
+
 @media (hover:hover){
   .stages-swiper__arrow:hover svg {
     transform:translateX(5px);
+  }
+}
+
+@media screen and (max-width: 1150px){
+  .stages-content{
+    padding:20px 30px 30px 30px;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .stages-description{
+    flex-wrap:wrap;
+  }
+  .stages-description__text{
+    width:100%;
+    margin-bottom:14px;
+    padding-bottom:25px;
+    border-bottom:1px solid #222831;
+  }
+  .stages-description__worktime{
+    width:100%;
+  }
+  .stages{
+    padding-top:100px;
+    padding-bottom:100px;
+  }
+  .stages-tab{
+    font-size:16px;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .stages-subtitle br{
+    display:none;
+  }
+  .stages-subtitle{
+    position:relative;
+    padding-right:20%;
+    font-size:16px;
+    font-weight:500;
+  }
+  .stages-subtitle span{
+    display:none;
+  }
+  .stages-warning{
+    display:block;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .stages-swiper__arrow{
+    display:none;
+  }
+  .stages-tab{
+    font-size:14px;
+  }
+  .stages-content{
+    padding:20px 10px 50px 10px;
+  }
+  .stages-tab{
+    height:60px;
+  }
+  .stages-points2{
+    display:block;
+  }
+  .stages-points{
+    bottom:-135px;
+    right:50px;
   }
 }

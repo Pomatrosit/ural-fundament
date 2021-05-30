@@ -69,3 +69,70 @@
   top:200px;
   right:100px;
 }
+
+@media screen and (max-width: 1260px){
+  .deficite-pipes-img{
+    width:97.5%;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .deficite{
+    padding-top:100px;
+    padding-bottom:100px;
+  }
+  .deficite-pipes-img{
+    bottom:100px;
+    height:200px;
+  }
+  .deficite-main-inner{
+    padding-bottom:260px;
+  }
+  .deficite-logo{
+    display:none;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .deficite-main-inner{
+    flex-wrap:wrap;
+  }
+  .deficite-left{
+    width:100%;
+    margin-bottom:50px;
+  }
+  .deficite-right{
+    width:100%;
+  }
+  .deficite__subtitle br{
+    display:none;
+  }
+  .deficite-img{
+    display:none;
+  }
+  .deficite-right .button{
+    margin-right:0;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .deficite-points{
+    top:-135px;
+    right:50px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .deficite-right .button{
+    width:240px;
+  }
+  .deficite__title{
+    font-size: 16px;
+  }
+  .deficite__title br{
+    display:none;
+  }
+  .deficite__subtitle{
+    font-size: 14px;
+  }
+}
