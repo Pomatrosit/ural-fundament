@@ -5,6 +5,7 @@ import { kinds } from './kinds'
 import { header } from './header'
 
 export const home = () => {
+  AOS.init();
   stages()
   portfolio()
   smoothScroll()

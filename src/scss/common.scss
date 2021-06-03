@@ -30,6 +30,10 @@ input, input:before, input:after {
     user-select: initial;
 }
 
+a{
+  text-decoration: none;
+}
+
 .app-wrapper{
   width:95%;
   max-width:1200px;
@@ -53,6 +57,8 @@ input, input:before, input:after {
   text-align: center;
   color: #fff;
   border-radius:2px;
+  text-decoration: none;
+  transition:0.3s;
 
   span {
     position:relative;
@@ -69,6 +75,7 @@ input, input:before, input:after {
   border-radius:50%;
   background: $red;
   top:25px;
+  transition:0.3s;
 }
 
 .button:after{
@@ -119,6 +126,37 @@ input, input:before, input:after {
 .btn-disabled{
   opacity:0.5;
   pointer-events:none;
+}
+
+.light-hovered, .dark-hovered{
+  transition:0.3s;
+}
+.dark-hovered{
+  border-right:none;
+}
+
+@media (hover:hover){
+  .button:hover:after{
+    transform:translateX(-10px);
+    background: $fontColor;
+  }
+  .button:hover:before{
+    transform:translateX(10px);
+    background: $fontColor;
+  }
+  .button:hover{
+    background:$fontColor;
+  }
+  .light-hovered:hover{
+    background:$red;
+    border:1px solid $red;
+  }
+  .light-hovered:hover span{
+    color:#fff;
+  }
+  .dark-hovered:hover{
+    background:$red;
+  }
 }
 
 @media screen and (max-width: 1100px){

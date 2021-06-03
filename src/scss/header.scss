@@ -39,7 +39,7 @@ header{
   &__top{
     font-size:24px;
     font-weight:700;
-    margin-bottom:10px;
+    margin-bottom:3px;
   }
 
   &__bottom{
@@ -61,6 +61,7 @@ header{
     color:$fontColor;
     cursor:pointer;
     margin-left:16px;
+    transition:0.3s;
   }
 }
 
@@ -149,6 +150,7 @@ header{
   height:50px;
   background:$fontColor;
   position:relative;
+  cursor:pointer;
 }
 
 .burger-span{
@@ -234,6 +236,20 @@ header{
   padding-bottom:15px;
   border-bottom:2px solid $fontColor;
   margin-bottom:25px;
+}
+
+.menu__item{
+  transition:0.3s;
+}
+
+.navbar-phone__top{
+  transition:0.3s;
+}
+
+@media (hover:hover){
+  .menu__item:hover, .navbar-phone:hover .navbar-phone__top{
+    color:$red;
+  }
 }
 
 @media screen and (max-width: 1250px){

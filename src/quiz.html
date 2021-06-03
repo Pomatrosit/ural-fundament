@@ -13,6 +13,12 @@
 
   <header class="header section quiz-header">
     <div class="app-wrapper">
+      <a href = "/" class="quiz-back-button">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.917 15.8334L7.08366 10L12.917 4.16669" stroke="#30475E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Вернуться на главную</span>
+      </a>
 
       <nav class="navbar">
         <p class="navbar__title">Установка винтового фундамента в Екатеринбурге <br/>и Свердловской области</p>
@@ -64,10 +70,21 @@
       <div class="quiz-main">
         <img class="quiz-points1" src="../static/img/horizontal-points.svg" alt="">
         <img class="quiz-points2" src="../static/img/horizontal-points.svg" alt="">
+        <svg class = "quiz-mobile-img" width="135" height="136" viewBox="0 0 135 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M38.1443 47.1366L66.8454 32.5683M38.1443 47.1366V85.3783M38.1443 47.1366L66.8454 60.7943L95.5464 47.1366M66.8454 32.5683L95.5464 47.1366M66.8454 32.5683V100.857M66.8454 32.5683V18M95.5464 47.1366V86.2889M95.5464 86.2889L66.8454 100.857M95.5464 86.2889L66.8454 70.81M66.8454 100.857L38.1443 85.3783M38.1443 85.3783L66.8454 70.81M66.8454 70.81L109 93.573M66.8454 70.81L22 93.573" stroke="#30475E" stroke-opacity="0.1" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="68" cy="68" r="66" stroke="#30475E" stroke-opacity="0.1" stroke-width="4"/>
+        </svg>
         <div class="quiz__left">
-          <p class="quiz-text">Укажите параметры вашего объекта и мы рассчитаем<br/>
+          <p class="quiz-text">Укажите параметры вашего объекта и мы рассчитаем
             точную стоимость фундамента «под ключ» за 5 минут
           </p>
+          <svg class = "quiz-arrow-down" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.08">
+            <path d="M25.5719 41.1459L25.5719 9.89587" stroke="#30475E" stroke-width="3.125" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M38.1236 28.5421L25.5736 41.1463L13.0215 28.5421" stroke="#30475E" stroke-width="3.125" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </svg>
+
           <img src="../static/img/house.png" alt="house" class="quiz__house-img">
           <svg class="quiz-background" width="602" height="601" viewBox="0 0 602 601" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M58.8241 263.549C56.3831 254.442 56.3828 244.852 58.8231 235.745C61.2634 226.637 66.0583 218.332 72.7259 211.665L211.662 72.7291C218.329 66.0615 226.634 61.2666 235.742 58.8263C244.849 56.386 254.439 56.3863 263.546 58.8273L393.556 93.6633C394.909 75.8524 401.11 58.751 411.487 44.2115L254.9 2.2584C243.66 -0.752864 231.827 -0.752803 220.588 2.2586C209.348 5.27001 199.099 11.1867 190.871 19.414L19.4139 190.871C11.1866 199.1 5.26999 209.348 2.2586 220.587C-0.752801 231.827 -0.752866 243.661 2.2584 254.9L45.8254 417.493C60.0676 406.616 77.0239 399.861 94.8435 397.967L58.8241 263.549Z" fill="#30475E" fill-opacity="0.03"/>
@@ -108,7 +125,7 @@
                 <option value="salmon">Другой материал</option>
               </select>
             </div>
-            <p class="quiz-body__subtitle">Размер(миллиметры)</p>
+            <p class="quiz-body__subtitle">Размер (метры)</p>
             <div class="quiz-inputs">
               <input type="text" class="quiz-input quiz-input-width" placeholder="Ширина">
               x
@@ -136,10 +153,10 @@
             </div>
 
             <div class="quiz-bottom-buttons">
-                <div class="quiz-bottom__button1">
+                <div class="quiz-bottom__button1 light-hovered">
                   <span>Задать вопрос по телефону</span>
                 </div>
-                <div class="quiz-bottom__button2">
+                <div class="quiz-bottom__button2 dark-hovered">
                   <span>Написать в WhatsApp</span>
                 </div>
             </div>
@@ -220,7 +237,7 @@
 
         <div class="footer-right">
           <ul class="menu footer-menu">
-            <li class="menu__item">На главную</li>
+            <li class="menu__item quiz-page-menu-item"><a href="/">На главную</a></li>
           </ul>
           <div class="navbar-phone">
             <p class="navbar-phone__top">8 800 200 20 20</p>
@@ -238,7 +255,7 @@
         <div class="footer-bottom__first">
           <p class="footer-bottom-text">2010 - 2021 «Урал - Фундамент»</p>
           <p class="footer-bottom-text">
-            <span>Полное или частичное копирование материалов сайт запрещено.</span>
+            <span>Полное или частичное копирование материалов сайта запрещено.</span>
             <a href="">Политика конфиденциальности.</a>
             <a href="">Публичная оферта.</a>
           </p>
@@ -250,7 +267,7 @@
     </div>
   </section>
 
-  <script src="./quiz.js"></script>
+  <script src="./quizMain.js"></script>
 
 </body>
 </html>

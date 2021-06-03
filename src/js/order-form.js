@@ -48,13 +48,21 @@ export const orderForm = () => {
       quizData.phone = phone.value
       loader.style.display = 'block'
       submitBtn.classList.add('btn-disabled')
-      // Отправка
+      //////// Отправка
+      fetch('https://ural-fundment.ru/mail.php', {
+        method: 'POST',
+        body: JSON.stringify(quizData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      //////
       console.log(quizData)
       setTimeout(() => {
-        firstStep.style.transform = 'transLateX(-50%)'
-        secondStep.style.transform = 'transLateX(-50%)'
+        firstStep.style.transform = 'translateX(-50%)'
+        secondStep.style.transform = 'translateX(-50%)'
         finalTextRef.innerHTML = finalText
-      }, 3000)
+      }, 500)
     }
   })
 }

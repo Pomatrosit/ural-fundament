@@ -2,17 +2,16 @@
   "name": "ural-fundament",
   "version": "1.0.0",
   "description": "ural",
-  "main": "index.html",
   "scripts": {
     "start": "parcel src/index.html src/quiz.html",
-    "build": "parcel build src/index.html src/quiz.html"
+    "build": "parcel build src/index.html src/quiz.html --no-source-maps"
   },
   "author": "Vasiliy Yurkin",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-beta.2",
     "cssnano": "^5.0.2",
-    "postcss": "^8.2.7",
+    "postcss": "^8.3.0",
     "sass": "^1.32.12"
   },
   "dependencies": {

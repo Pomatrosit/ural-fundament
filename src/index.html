@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- <link rel="stylesheet" href="../static/fonts/stylesheet"> -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>Урал - Фундамент</title>
 </head>
 <body>
@@ -13,11 +14,11 @@
       <div class="app-wrapper">
 
         <nav class="navbar">
-          <p class="navbar__title">Установка винтового фундамента <br/> в Екатеринбурге и Свердловской области</p>
-          <div class="navbar__logo">
+          <p class="navbar__title" data-aos="zoom-in">Установка винтового фундамента <br/> в Екатеринбурге и Свердловской области</p>
+          <div class="navbar__logo" data-aos="zoom-in" data-aos-delay="100">
             <img src="../static/img/logo-and-title.svg" alt="logo" class="navbar-header-logo-img">
           </div>
-          <div class="navbar-phone">
+          <div class="navbar-phone" data-aos="zoom-in" data-aos-delay="200">
             <p class="navbar-phone__top">8 800 200 20 20</p>
             <p class="navbar-phone__bottom">Заказать бесплатный звонок</p>
           </div>
@@ -64,14 +65,14 @@
         </div>
 
         <ul class="menu">
-          <li class="menu__item" data-scroll='technology'>Технология</li>
-          <li class="menu__item" data-scroll='price'>Цены</li>
-          <li class="menu__item" data-scroll='stages'>Установка</li>
-          <li class="menu__item" data-scroll='portfolio'>Портфолио</li>
-          <li class="menu__item" data-scroll='contacts'>Контакты</li>
+          <li class="menu__item" data-scroll='technology' data-aos="zoom-in" data-aos-delay="250"><span>Технология</span></li>
+          <li class="menu__item" data-scroll='price' data-aos="zoom-in" data-aos-delay="300">Цены</li>
+          <li class="menu__item" data-scroll='stages' data-aos="zoom-in" data-aos-delay="350">Установка</li>
+          <li class="menu__item" data-scroll='portfolio' data-aos="zoom-in" data-aos-delay="400">Портфолио</li>
+          <li class="menu__item" data-scroll='contacts' data-aos="zoom-in" data-aos-delay="450">Контакты</li>
         </ul>
 
-        <h1 class="header__title">Винтовой фундамент №1 <br/>в ЕКБ от производителя</h1>
+        <h1 class="header__title" >Винтовой фундамент №1 <br/>в ЕКБ от производителя</h1>
 
         <img class="house2" src="../static/img/house.png" alt="house">
 
@@ -88,7 +89,7 @@
 
         <div class="button-down"></div>
 
-        <div class="button with-ml-9"><span>Рассчитать стоимость фундамента</span></div>
+        <a href="./quiz.html" class="button with-ml-9"><span>Рассчитать стоимость фундамента</span></a>
 
       </div>
     </header>
@@ -301,7 +302,7 @@
 
         <div class="technology-button">
           <div class="technology-background"></div>
-          <div class="button with-margin-auto"><span>Рассчитать стоимость фундамента</span></div>
+          <a href="./quiz.html" class="button with-margin-auto"><span>Рассчитать стоимость фундамента</span></a>
         </div>
 
       </div>
@@ -374,8 +375,8 @@
                   <p class="price-card__price"><span>Стоимость без установки: </span> <span>1500 ₽ </span></p>
                 </div>
                 <div class="price-card__buttons">
-                  <div class="price-card__button-gray"><span>Рассчитать фундамент</span></div>
-                  <div class="price-card__button-light"><span>Задать вопрос специалисту</span></div>
+                  <a href="./quiz.html" class="price-card__button-gray dark-hovered"><span>Рассчитать фундамент</span></a>
+                  <div class="price-card__button-light light-hovered"><span>Задать вопрос специалисту</span></div>
                 </div>
               </div>
             </div>
@@ -412,8 +413,8 @@
                   <p class="price-card__price"><span>Стоимость без установки: </span> <span>1200 ₽ </span></p>
                 </div>
                 <div class="price-card__buttons">
-                  <div class="price-card__button-gray"><span>Рассчитать фундамент</span></div>
-                  <div class="price-card__button-light"><span>Задать вопрос специалисту</span></div>
+                  <a href="./quiz.html" class="price-card__button-gray dark-hovered"><span>Рассчитать фундамент</span></a>
+                  <div class="price-card__button-light light-hovered"><span>Задать вопрос специалисту</span></div>
                 </div>
               </div>
             </div>
@@ -503,8 +504,15 @@
                 Гораздо проще механический способ — испльзование специального оборудования для монтажа, существенно ускоряет
                 и упрощает процесс вкручивания.</p>
               <div class="stages-description__worktime">
-                  <p class="stages-description__worktime-text">Длительность работ (мех. способом) ...... <span>20 минут / свая</span></p>
-                  <p class="stages-description__worktime-text">Длительность работ (руч. способом) ...... <span>60 минут / свая</span></p>
+                  <p class="stages-description__worktime-text">
+                    <span>Длительность работ (мех. способом)</span>
+                    <span class="stages-description__worktime-points">......</span>
+                    <span class="stages-description__worktime-time">20 минут / свая</span></p>
+                  <p class="stages-description__worktime-text">
+                    <span>Длительность работ (руч. способом)</span>
+                    <span class="stages-description__worktime-points">......</span>
+                    <span class="stages-description__worktime-time">60 минут / свая</span></p>
+                  </p>
               </div>
             </div>
 
@@ -540,7 +548,7 @@
             </div>
             <div class="deficite-right">
               <img class="deficite-img" src="../static/img/deficite.png" alt="deficite">
-              <div class="button with-mr3"><span>Забронировать сваи сейчас</span></span></div>
+              <a href="./quiz.html" class="button with-mr3"><span>Забронировать сваи сейчас</span></span></a>
             </div>
           </div>
 
@@ -582,8 +590,8 @@
                     </p>
 
                     <div class="portcolio-slide__buttons">
-                      <div class="portfolio-slide__button-gray"><span>Хочу так же</span></div>
-                      <div class="portfolio-slide__button-light"><span>Задать вопрос в WhatsApp</span></div>
+                      <a href="./quiz.html" class="portfolio-slide__button-gray dark-hovered"><span>Хочу так же</span></a>
+                      <div class="portfolio-slide__button-light light-hovered"><span>Задать вопрос в WhatsApp</span></div>
                     </div>
 
                 </div>
@@ -610,8 +618,8 @@
                     </p>
 
                     <div class="portcolio-slide__buttons">
-                      <div class="portfolio-slide__button-gray"><span>Хочу так же</span></div>
-                      <div class="portfolio-slide__button-light"><span>Задать вопрос в WhatsApp</span></div>
+                      <a href="./quiz.html" class="portfolio-slide__button-gray dark-hovered"><span>Хочу так же</span></a>
+                      <div class="portfolio-slide__button-light light-hovered"><span>Задать вопрос в WhatsApp</span></div>
                     </div>
 
                 </div>
@@ -752,7 +760,7 @@
           <div class="footer-bottom__first">
             <p class="footer-bottom-text">2010 - 2021 «Урал - Фундамент»</p>
             <p class="footer-bottom-text">
-              <span>Полное или частичное копирование материалов сайт запрещено.</span>
+              <span>Полное или частичное копирование материалов сайта запрещено.<br/><br/></span>
               <a href="">Политика конфиденциальности.</a>
               <a href="">Публичная оферта.</a>
             </p>
@@ -764,6 +772,7 @@
       </div>
     </section>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src = './index.js'></script>
 </body>
 </html>

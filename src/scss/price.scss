@@ -202,7 +202,8 @@
 }
 
 .price-card__mobile-text{
-  @include flex(center, space-between)
+  @include flex(center, space-between);
+  margin-bottom:10px;
 }
 
 .price-card__mobile-text span:first-child{
@@ -211,7 +212,6 @@
   line-height: 150%;
   letter-spacing: 0.03em;
   color: #878787;
-  margin-bottom:10px;
 }
 
 .price-card__mobile-text span:last-child{
@@ -336,5 +336,20 @@
   }
   .price-content__points2{
     display:block
+  }
+  .price-card__left:after, .price-card__left:before{
+    content:'';
+    position:absolute;
+    width:calc(100% - 20px);
+    height:1px;
+    background:#222831;
+    bottom:10px;
+    left:10px;
+  }
+  .price-card__left:before{
+    bottom:-270px;
+  }
+  .price-card__price-block{
+    margin-top:50px;
   }
 }

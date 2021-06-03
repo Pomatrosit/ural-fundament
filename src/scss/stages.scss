@@ -71,7 +71,7 @@
 
 .stages-description{
   margin-top:40px;
-  @include flex(flex-start, space-between)
+  @include flex(flex-start, space-between);
 }
 
 .stages-description__text{
@@ -90,7 +90,7 @@
   margin-bottom:10px;
 }
 
-.stages-description__worktime-text span{
+.stages-description__worktime-time{
   font-weight: 600;
   font-size: 16px;
   line-height: 170%;
@@ -212,5 +212,23 @@
   .stages-points{
     bottom:-135px;
     right:50px;
+  }
+  .stages-description__worktime-points{
+    display:none;
+  }
+  .stages-description__worktime-text{
+    justify-content:space-between;
+    @include flex(flex-start, space-between);
+    font-size:14px;
+  }
+  .stages-description__text{
+    font-size:14px;
+  }
+  .stages-description__worktime-time{
+    font-size:14px;
+    min-width:140px;
+  }
+  .footer-bottom-text{
+    line-height: 150%;
   }
 }
