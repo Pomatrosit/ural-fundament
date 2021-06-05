@@ -120,10 +120,6 @@
 }
 
 .technology-card-bottom{
-  background: #FFFFFF;
-  box-shadow: 6px 20px 30px rgba(0, 0, 0, 0.08);
-  border-radius: 2px;
-  padding:34px 80px 34px 0;
   position:absolute;
   top:500px;
   left:50%;
@@ -175,6 +171,15 @@
   color: #D6DADF;
   display:none;
 }
+
+.technology-card-bottom-inner{
+  background: #FFFFFF;
+  box-shadow: 6px 20px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  padding:34px 80px 34px 0;
+  position:relative;
+}
+
 
 @media screen and (max-width: 1180px){
   .technology-main{
@@ -238,11 +243,11 @@
   .technology-card__number{
     display:block;
   }
-  .technology-card-bottom{
+  .technology-card-bottom-inner{
     background:$fontColor;
     padding:0 25px 49px 25px;
   }
-  .technology-card-bottom br{
+  .technology-card-bottom-inner br{
     display:none;
   }
   .technology-card-bottom__text{

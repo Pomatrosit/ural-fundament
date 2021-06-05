@@ -55,6 +55,7 @@
   transition:0.3s;
   position:relative;
   text-align:center;
+  transition:0.3s;
 }
 
 .stages-tab--active{
@@ -144,6 +145,9 @@
 @media (hover:hover){
   .stages-swiper__arrow:hover svg {
     transform:translateX(5px);
+  }
+  .stages-tab:hover{
+    color:$red;
   }
 }
 

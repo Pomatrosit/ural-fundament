@@ -10,6 +10,8 @@ import './scss/deficite.scss'
 import './scss/portfolio.scss'
 import './scss/contacts.scss'
 import './scss/footer.scss'
+import './scss/modal.scss'
+import './scss/order-form.scss'
 import { home } from './js/home'
 
 document.addEventListener("DOMContentLoaded", function(event) {

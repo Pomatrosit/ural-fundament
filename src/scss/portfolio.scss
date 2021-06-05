@@ -88,7 +88,7 @@
 
 .portcolio-slide__buttons{
   margin-top:28px;
-  @include flex(center)
+  @include flex(center, flex-start)
 }
 
 .portfolio-slide__button-gray{
@@ -128,7 +128,6 @@
 
 .price-card__buttons{
   @include flex(center, flex-start);
-
 }
 
 .portfolio-swiper-pagination .swiper-pagination-bullet-active{
@@ -148,7 +147,6 @@
 }
 
 .portfolio-swiper-arrow-left, .portfolio-swiper-arrow-right{
-  background:#fff;
   width:60px;
   height:60px;
   position:absolute;
@@ -157,6 +155,23 @@
   left:0;
   @include flex(center, center);
   cursor:pointer;
+}
+
+.portfolio-swiper-arrow svg{
+  position:relative;
+  z-index:1;
+}
+
+.portfolio-swiper-arrow:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  z-index:0;
+  background:#fff;
+  transition:0.3s;
   box-shadow: 2px 7px 50px rgba(0, 0, 0, 0.05);
   border-radius: 2px;
 }
@@ -165,9 +180,28 @@
   left:calc(100% - 60px);
 }
 
+.portfolio-slide__button-light{
+  display:none;
+}
+
+@media (hover:hover){
+  .portfolio-swiper-arrow:hover:after{
+    transform:scale(0.95);
+  }
+}
+
 @media screen and (max-width: 1100px){
   .portfolio-swiper-container{
     width:100%;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .portfolio-slide__button-light{
+    display:flex;
+  }
+  .portcolio-slide__buttons{
+    @include flex(center)
   }
 }
 

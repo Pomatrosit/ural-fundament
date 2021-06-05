@@ -237,6 +237,20 @@
   display:none;
 }
 
+.price-bottm__call{
+  cursor:pointer;
+}
+
+.price-bottm__call path{
+  transition:0.3s;
+}
+
+@media(hover:hover){
+  .price-bottm__call:hover path{
+    stroke:$red;
+  }
+}
+
 @media screen and (max-width: 1200px){
   .price-bottom__points{
     display:none;

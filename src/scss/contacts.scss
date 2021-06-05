@@ -26,12 +26,17 @@
   margin-bottom:21px;
 }
 
+.contacts-text-hovered{
+  cursor:pointer;
+}
+
 .contacts-text span {
   margin-left:15px;
   font-weight: 500;
   font-size: 18px;
   letter-spacing: 0.03em;
   color: $fontColor;
+  transition:0.3s;
 }
 
 .contacts-left{
@@ -86,6 +91,12 @@
   letter-spacing: 0.03em;
   color: $fontColor;
   display:none;
+}
+
+@media (hover:hover){
+  .contacts-text-hovered:hover span{
+    color:$red;
+  }
 }
 
 @media screen and (max-width: 1260px){

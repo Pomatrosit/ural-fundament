@@ -10,13 +10,16 @@ export const kinds = () => {
     autoHeight: true,
     breakpoints: {
       600: {
-        slidesPerView: 2
+        slidesPerView: 2,
+        spaceBetween: 0,
       },
       900: {
-        slidesPerView: 3
+        slidesPerView: 3,
+        spaceBetween: 0,
       },
       1200: {
-        slidesPerView: 4
+        slidesPerView: 4,
+        spaceBetween: 0,
       }
     }
   })
